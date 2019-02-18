@@ -1,0 +1,31 @@
+{
+  "name": "joi-ts-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "regenerate-joi-types": "joi-ts-gen",
+    "start": "tsc index.ts && node index.js"
+  },
+  "joiTsGenerator": {
+    "input": "./src/schemas/index.ts",
+    "nullableMode": "option",
+    "outputs": {
+      "library": "./src/coercion.generated.ts",
+      "optics": "./src/optics",
+      "types": "./src/schemas/types.ts",
+      "utils": "./src/schemas/utils.ts"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@musicglue/joi-ts-generator": "^6.0.2"
+  },
+  "dependencies": {
+    "joi": "^14.3.1",
+    "joi-extract-type": "^0.1.6",
+    "typesafe-joi": "^1.0.0-beta5"
+  }
+}
